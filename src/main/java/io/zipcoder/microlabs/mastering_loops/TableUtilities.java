@@ -8,7 +8,8 @@ public class TableUtilities {
         for (int i = 1; i <= tableSize; i++) {
             for (int j = 1; j <= tableSize; j++) {
 
-                result.append("  " + i * j + " |");
+              //  result.append("  " + i * j + " |");
+                result.append(String.format("%3d |" ,(i * j)));
 
             }
             result.append("\n");
@@ -21,18 +22,22 @@ public class TableUtilities {
     }
 
     public static String getSmallMultiplicationTable() {
-//        for (int i = 1; i <= tableSize; i++) {
-//            for (int j = 1; j <= tableSize; j++) {
-//
-//                result.append("  " + i * j + " |");
-//
-//            }
-//            result.append("\n");
-//        }
-//
-//        return result.toString();
-//        return null;
-        return getMultiplicationTable(2);
+
+      //  return getMultiplicationTable(2);
+
+
+        StringBuilder result = new StringBuilder();
+
+        for (int i = 1; i <= 5; i++) {
+            for (int j = 1; j <= 5; j++) {
+
+                result.append(String.format(" %2d |" ,(i * j)));
+
+            }
+            result.append("\n");
+        }
+
+        return result.toString();
     }
 
 
@@ -41,11 +46,9 @@ public class TableUtilities {
 
         for (int i = 1; i <= 10; i++) {
             for (int j = 1; j <= 10; j++) {
-                result.append(" " + i * j + "  |");
-
-
+                result.append(String.format("%3d |" ,(i * j)));
             }
-          //  result.insert(0," ");
+
             result.append("\n");
         }
 
